@@ -1,0 +1,202 @@
+/* Tuto by Marina : How to recreate Google homepage */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    font-size: small;
+}
+
+a {
+    padding-right: 15px;
+    display: inline-block;
+    text-align: center;
+    color: #666;
+}
+
+a:link:not([class]),
+a:visited:not([class]) {
+    text-decoration: none;
+}
+
+a:hover:not([class]),
+a:active:not([class]) {
+    text-decoration: underline;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 15px 30px;
+    line-height: 30px;
+}
+
+.blue-btn {
+    color: white;
+    border: 1px solid #4285f4;
+    font-weight: bold;
+    background: #4285f4;
+    line-height: 28px;
+    padding: 0 12px !important;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    min-height: 92px;
+    min-width: 272px;
+    background: url(logo.png) no-repeat;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+.subtext {
+    color: #4285f4;
+    font-size: 16px;
+    position: relative;
+    left: 215px;
+    top: 76px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    min-width: 544px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.search-bar:hover,
+.search-bar:active {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.text-bar {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font: 16px;
+    line-height: 34px;
+    padding: 6px 16px;
+    font-size: 16px !important;
+}
+
+.micro {
+    height: 24px;
+    width: 24px;
+    background: url(micro.png) no-repeat;
+    background-size: contain;
+    opacity: 1;
+    margin-right: 15px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: center;
+}
+
+.grey-btn {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    color: #757575;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 11px 4px;
+    min-width: 54px;
+    height: 34px;
+    padding: 0 16px;
+    text-align: center;
+    outline: none;
+}
+
+.grey-btn:hover,
+.grey-btn:active {
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 27px;
+    padding-right: 15px;
+}
+
+/*Create a tooltip for micro icon in search bar*/
+
+.micro span {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 40px;
+    margin-right: 314px;
+    right: 0;
+    z-index: 999;
+    margin-left: -127px;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 11px;
+    background-color: #2D2D2D;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.08);
+
+}
+
+.micro:hover span {
+    visibility: visible;
+}
+
+.micro span:before,
+.micro span:after {
+    content: "";
+    position: absolute;
+    z-index: 1000;
+    top: -6px;
+    left: 50%;
+    margin-left: -6px;
+    border-bottom: 6px solid #2D2D2D;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 0;
+}
+
+.micro span:before {
+    border-bottom: 7px solid white;
+    top: -8px;
+}
